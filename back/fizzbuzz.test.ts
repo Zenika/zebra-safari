@@ -1,36 +1,35 @@
-import {assertEquals} from "https://deno.land/std@0.98.0/testing/asserts.ts";
-import {fizzbuzz} from './fizzbuzz.ts';
+import { assertEquals } from "https://deno.land/std@0.98.0/testing/asserts.ts";
+import { fizzbuzz } from "./fizzbuzz.ts";
 
 Deno.test("should return the entry number by default", () => {
-    const number = 1;
+  const number = 1;
 
-    const result = fizzbuzz(number);
+  const result = fizzbuzz(number);
 
-    assertEquals("1", result);
+  assertEquals("1", result);
 });
 
 Deno.test("should return FIZZ if multiple of 3", () => {
-    const number = 3;
+  const number = 3;
 
-    const result = fizzbuzz(number);
+  const result = fizzbuzz(number);
 
-    assertEquals("FIZZ", result);
+  assertEquals("FIZZ", result);
 });
 
 // Fully fledged test definition, longer form, but configurable (see below)
 Deno.test("should return BUZZ if multiple of 5", () => {
-    const number = 5;
+  const number = 5;
 
-    const result = fizzbuzz(number);
+  const result = fizzbuzz(number);
 
-    assertEquals("BUZZ", result);
+  assertEquals("BUZZ", result);
 });
 
-
 Deno.test("should return FIZZBUZZ if multiple of 3 and 5", () => {
-    const number = 15;
+  const number = 15;
 
-    const result = fizzbuzz(number);
+  const result = fizzbuzz(number);
 
-    assertEquals("FIZZBUZZ", result);
+  assertEquals("FIZZBUZZ", result);
 });
