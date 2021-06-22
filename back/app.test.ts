@@ -6,5 +6,5 @@ Deno.test("it should return some JSON with status code 200", async () => {
   await request.get("/fizzbuzz/3")
       .expect(200)
       .expect("Content-Type", /json/)
-      .expect('{"message":"fizz"}');
+      .expect('{"number":3,"result":"FIZZ"}');
 });
