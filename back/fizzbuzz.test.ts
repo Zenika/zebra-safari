@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.98.0/testing/asserts.ts";
+import { assertEquals } from "./deps-test.ts";
 import { fizzbuzz } from "./fizzbuzz.ts";
 
 Deno.test("should return the entry number by default", () => {

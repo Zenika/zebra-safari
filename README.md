@@ -18,5 +18,10 @@ Découvrir de nouvelles technos et emuler les connaissances entre les zebras
 ### Lancer les tests
 
 ```
-deno test
+deno test --allow-net
+```
+
+### Lancer l'application 
+```
+deno run --allow-net main.ts
 ```
