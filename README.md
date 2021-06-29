@@ -1,4 +1,5 @@
 # zebra-safari
+![Build Status](https://github.com/Zenika/zebra-safari/actions/workflows/deno.yml/badge.svg)
 
 ## Objet du repo
 
