@@ -15,7 +15,7 @@ on:
     branches: [main]
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -40,3 +40,6 @@ jobs:
 
       - name: Run tests
         run: deno test --allow-net back/
+
+      - name: Compile
+        run: mkdir -p build && deno compile --allow-net --output build/fizzbuzz ./back/main.ts
