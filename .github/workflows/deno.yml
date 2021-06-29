@@ -16,12 +16,7 @@ on:
 
 jobs:
   test:
-    runs-on: ${{ matrix.os }} # runs a test on Ubuntu, Windows and macOS
-
-    strategy:
-      matrix:
-        deno: ["v1.x", "canary"]
-        os: [macOS-latest, windows-latest, ubuntu-latest]
+    runs-on: ubuntu-latest
 
     steps:
       - name: Setup repo
@@ -31,7 +26,7 @@ jobs:
         # uses: denoland/setup-deno@v1
         uses: denoland/setup-deno@4a4e59637fa62bd6c086a216c7e4c5b457ea9e79
         with:
-          deno-version: ${{ matrix.deno }} # tests across multiple Deno versions
+          deno-version: 1.11.0
 
       # Uncomment this step to verify the use of 'deno fmt' on each commit.
       - name: Verify formatting
