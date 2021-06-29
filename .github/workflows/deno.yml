@@ -41,7 +41,7 @@ jobs:
         run: deno lint back/
 
       - name: Cache dependencies
-        run: deno cache deps.ts
+        run: deno cache back/deps.ts
 
       - name: Run tests
         run: deno test --allow-net back/
