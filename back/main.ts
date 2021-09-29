@@ -1,3 +1,6 @@
 import { app } from "./app.ts";
+import { config } from "./deps.ts";
 
-await app.listen({ port: 8000 });
+const { PORT } = config();
+console.log("app started on port : ", PORT);
+await app.listen({ port: parseInt(PORT, 10) });
