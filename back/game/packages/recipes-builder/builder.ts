@@ -1,3 +1,5 @@
+import { cloneDeep, zip } from "./deps.ts";
+
 export enum Durability {
   LOW = "LOW",
   MEDIUM = "MEDIUM",
@@ -25,14 +27,19 @@ export interface Product extends Resource {
 export interface Recipe {
   name: string;
   ingredients: Resource[];
+  product: Product;
 }
 
 export const productBuilder = (
   resources: Resource[],
   recipe: Recipe
 ): Product => {
-  console.log(resources);
-  console.log(recipe);
-
-  return {} as Product;
+  const zippedProduct = zip(recipe.ingredients, resources);
+  const areResourcesEquals = zippedProduct.every(
+    (el: Resource[]) => el[0] === el[1]
+  );
+  if (!areResourcesEquals) {
+    throw new Error(`Provided resources don't match the recipe ingredients.`);
+  }
+  return cloneDeep(recipe.product);
 };
