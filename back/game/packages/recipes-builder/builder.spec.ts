@@ -8,7 +8,6 @@ import {
   Type,
 } from "./builder.ts";
 import { Durability } from "./builder.ts";
-import { assertNotEquals } from "./deps-test.ts";
 
 const oeuf: Resource = {
   type: Type.FOOD,
