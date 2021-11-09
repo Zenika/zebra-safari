@@ -1,4 +1,4 @@
-import { zip,cloneDeep } from "../../deps.ts";
+import { cloneDeep, zip } from "../../deps.ts";
 import { Product } from "../../entities/product/types.ts";
 import { Recipe } from "../../entities/recipe/types.ts";
 import { Resource } from "../../entities/resource/types.ts";

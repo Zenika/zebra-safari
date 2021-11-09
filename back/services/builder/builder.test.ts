@@ -1,4 +1,3 @@
-
 import { productBuilder, sortResources, Type } from "./builder.ts";
 import { Durability } from "./builder.ts";
 import { Product } from "../../entities/product/types.ts";
@@ -38,7 +37,7 @@ Deno.test(
     const omelette: Product = productBuilder([gruyere, oeuf], omeletteRecipe);
 
     assertEquals(product, omelette);
-  }
+  },
 );
 
 Deno.test(
@@ -51,9 +50,9 @@ Deno.test(
     assertThrows(
       () => productBuilder([gruyere, gruyere], omeletteRecipe),
       undefined,
-      "Provided resources doesn't match the recipe ingredients."
+      "Provided resources doesn't match the recipe ingredients.",
     );
-  }
+  },
 );
 
 Deno.test(
@@ -66,9 +65,9 @@ Deno.test(
     assertThrows(
       () => productBuilder([gruyere, gruyere, oeuf], omeletteRecipe),
       undefined,
-      "Provided resources list doesn't match the recipe ingredients size."
+      "Provided resources list doesn't match the recipe ingredients size.",
     );
-  }
+  },
 );
 
 Deno.test(
@@ -81,7 +80,7 @@ Deno.test(
     const omelette: Product = productBuilder([oeuf, gruyere], omeletteRecipe);
 
     assertEquals(product, omelette);
-  }
+  },
 );
 
 Deno.test(
@@ -105,5 +104,5 @@ Deno.test(
       const result: number = sortResources(gruyere, oeuf);
       assertEquals(result, -1);
     });
-  }
+  },
 );

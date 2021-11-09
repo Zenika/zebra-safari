@@ -8,5 +8,5 @@ Deno.test("it should return some JSON with status code 200", async () => {
     .send({})
     .expect(200)
     .expect("Content-Type", /json/)
-    .expect('{}');
+    .expect("{}");
 });
