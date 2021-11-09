@@ -4,3 +4,4 @@ export {
   cloneDeep,
   zip,
 } from "https://deno.land/x/lodash@4.17.15-es/lodash.js";
+export { faker } from "https://deno.land/x/deno_faker@v1.0.0/mod.ts";
