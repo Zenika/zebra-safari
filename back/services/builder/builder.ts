@@ -33,7 +33,7 @@ export const productBuilder = (
     resources.sort(sortResources),
   );
   const areResourcesEquals = zippedProduct.every(
-    (el: Resource[]) => el[0] === el[1],
+    (el: Resource[]) => JSON.stringify(el[0]) === JSON.stringify(el[1]),
   );
   if (!areResourcesEquals) {
     throw new Error(`Provided resources doesn't match the recipe ingredients.`);
