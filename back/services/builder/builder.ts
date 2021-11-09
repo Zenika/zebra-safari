@@ -1,4 +1,7 @@
-import { cloneDeep, zip } from "./deps.ts";
+import { zip,cloneDeep } from "../../deps.ts";
+import { Product } from "../../entities/product/types.ts";
+import { Recipe } from "../../entities/recipe/types.ts";
+import { Resource } from "../../entities/resource/types.ts";
 
 export enum Durability {
   LOW = "LOW",
@@ -13,21 +16,6 @@ export enum Type {
   TOOL = "TOOL",
   CLOTHES = "CLOTHES",
   MEAL = "MEAL",
-}
-
-export interface Resource {
-  name: string;
-  type: Type;
-}
-
-export interface Product extends Resource {
-  durability: Durability;
-}
-
-export interface Recipe {
-  name: string;
-  ingredients: Resource[];
-  product: Product;
 }
 
 export const productBuilder = (
