@@ -3,7 +3,7 @@
 
 ## Objet du repo
 
-Découvrir de nouvelles technos et emuler les connaissances entre les zebras
+Créer un jeu de survie avec un backend en deno. Pour la suite on verra :)
 
 ## La stack à explorer
 
@@ -11,15 +11,16 @@ Découvrir de nouvelles technos et emuler les connaissances entre les zebras
 
 - **pour le front** on va faire du React en typescript
 
-- **pour l'infra** on va déployer les sources sur aws avec terraform et
+- **pour l'infra** on va déployer les sources sur gcp avec terraform et
   kubernetes.
   
 ## Commandes
+Se placer dans le folder ```/back```
 
 ### Lancer les tests
 
 ```
-deno test --allow-net
+deno test --allow-net --allow-read --unstable
 ```
 
 ### Lancer l'application 
