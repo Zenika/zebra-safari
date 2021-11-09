@@ -42,4 +42,4 @@ jobs:
         run: deno test --allow-net --unstable back/
 
       - name: Compile
-        run: mkdir -p build && deno compile --allow-net --output build/fizzbuzz ./back/main.ts
+        run: mkdir -p build && deno compile --allow-net --output build ./back/main.ts
