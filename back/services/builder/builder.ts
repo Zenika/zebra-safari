@@ -1,7 +1,7 @@
 import { cloneDeep, zip } from "../../deps.ts";
-import { Product } from "../../entities/product/types.ts";
-import { Recipe } from "../../entities/recipe/types.ts";
-import { Resource } from "../../entities/resource/types.ts";
+import { Product } from "../../domain/product/types.ts";
+import { Recipe } from "../../domain/recipe/types.ts";
+import { Resource } from "../../domain/resource/types.ts";
 
 export const productBuilder = (
   resources: Resource[],

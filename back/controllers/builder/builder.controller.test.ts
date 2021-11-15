@@ -1,6 +1,6 @@
-import { productFixtureFactory } from "../../entities/product/product.fixture.ts";
-import { resourceFixtureFactory } from "../../entities/resource/resource.fixture.ts";
-import { recipeFixtureFactory } from "../../entities/recipe/recipe.fixture.ts";
+import { productFixtureFactory } from "../../domain/product/product.fixture.ts";
+import { resourceFixtureFactory } from "../../domain/resource/resource.fixture.ts";
+import { recipeFixtureFactory } from "../../domain/recipe/recipe.fixture.ts";
 import { app } from "../../app.ts";
 import { superoak } from "../../deps-test.ts";
 import { times } from "../../deps.ts";
