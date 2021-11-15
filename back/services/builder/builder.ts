@@ -1,34 +1,7 @@
-import { cloneDeep, zip } from "./deps.ts";
-
-export enum Durability {
-  LOW = "LOW",
-  MEDIUM = "MEDIUM",
-  HIGH = "HIGH",
-}
-
-export enum Type {
-  FOOD = "FOOD",
-  MATERIAL = "MATERIAL",
-  WEAPON = "WEAPON",
-  TOOL = "TOOL",
-  CLOTHES = "CLOTHES",
-  MEAL = "MEAL",
-}
-
-export interface Resource {
-  name: string;
-  type: Type;
-}
-
-export interface Product extends Resource {
-  durability: Durability;
-}
-
-export interface Recipe {
-  name: string;
-  ingredients: Resource[];
-  product: Product;
-}
+import { cloneDeep, zip } from "../../deps.ts";
+import { Product } from "../../domain/product/types.ts";
+import { Recipe } from "../../domain/recipe/types.ts";
+import { Resource } from "../../domain/resource/types.ts";
 
 export const productBuilder = (
   resources: Resource[],
@@ -45,7 +18,7 @@ export const productBuilder = (
     resources.sort(sortResources),
   );
   const areResourcesEquals = zippedProduct.every(
-    (el: Resource[]) => el[0] === el[1],
+    (el: Resource[]) => JSON.stringify(el[0]) === JSON.stringify(el[1]),
   );
   if (!areResourcesEquals) {
     throw new Error(`Provided resources doesn't match the recipe ingredients.`);
