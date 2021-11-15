@@ -1,6 +1,6 @@
 import { faker } from "../../deps.ts";
-import { Durability } from "../../services/builder/builder.ts";
 import { resourceFixtureFactory } from "../resource/resource.fixture.ts";
+import { Durability } from "./product.enum.ts";
 import { Product } from "./types.ts";
 
 export const productFixtureFactory = ({

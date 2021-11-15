@@ -1,4 +1,4 @@
-import { builderRouter } from "./controllers/builder/index.ts";
+import { builderRouter } from "./controllers/builder/builder.controller.ts";
 import { Application } from "./deps.ts";
 
 export const app = new Application();

@@ -1,4 +1,4 @@
-import { Type } from "../../services/builder/builder.ts";
+import { Type } from "./resource.enum.ts";
 
 export interface Resource {
   name: string;

@@ -1,9 +1,10 @@
-import { productBuilder, sortResources, Type } from "./builder.ts";
-import { Durability } from "./builder.ts";
+import { productBuilder, sortResources } from "./builder.ts";
 import { Product } from "../../entities/product/types.ts";
 import { Recipe } from "../../entities/recipe/types.ts";
 import { Resource } from "../../entities/resource/types.ts";
 import { assertEquals, assertThrows, description } from "../../deps-test.ts";
+import { Type } from "../../entities/resource/resource.enum.ts";
+import { Durability } from "../../entities/product/product.enum.ts";
 
 const oeuf: Resource = {
   type: Type.FOOD,

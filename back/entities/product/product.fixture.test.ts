@@ -1,5 +1,5 @@
-import { Durability } from "../../services/builder/builder.ts";
 import { assert, assertArrayIncludes } from "../../deps-test.ts";
+import { Durability } from "./product.enum.ts";
 import { productFixtureFactory } from "./product.fixture.ts";
 Deno.test("productFixtureFactory", async (t) => {
   await t.step("should return a truthy product", () => {

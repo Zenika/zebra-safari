@@ -1,5 +1,5 @@
 import { assert, assertArrayIncludes } from "../../deps-test.ts";
-import { Type } from "../../services/builder/builder.ts";
+import { Type } from "./resource.enum.ts";
 import { resourceFixtureFactory } from "./resource.fixture.ts";
 
 Deno.test("resourceFixture", async (t) => {

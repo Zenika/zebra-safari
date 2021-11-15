@@ -1,5 +1,5 @@
 import { faker } from "../../deps.ts";
-import { Type } from "../../services/builder/builder.ts";
+import { Type } from "./resource.enum.ts";
 import { Resource } from "./types.ts";
 
 export const resourceFixtureFactory = ({

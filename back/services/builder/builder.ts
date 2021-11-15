@@ -3,21 +3,6 @@ import { Product } from "../../entities/product/types.ts";
 import { Recipe } from "../../entities/recipe/types.ts";
 import { Resource } from "../../entities/resource/types.ts";
 
-export enum Durability {
-  LOW = "LOW",
-  MEDIUM = "MEDIUM",
-  HIGH = "HIGH",
-}
-
-export enum Type {
-  FOOD = "FOOD",
-  MATERIAL = "MATERIAL",
-  WEAPON = "WEAPON",
-  TOOL = "TOOL",
-  CLOTHES = "CLOTHES",
-  MEAL = "MEAL",
-}
-
 export const productBuilder = (
   resources: Resource[],
   recipe: Recipe,
