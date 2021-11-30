@@ -83,3 +83,37 @@ Deno.test(
     );
   },
 );
+
+Deno.test(
+  description({
+    name: "Should combine resources if",
+    given: "Provided resources not in the same order as the recipe resources",
+    should: "Return the expected product",
+  }),
+  () => {
+    const resources: Resource[] = [
+      { name: "Fromage", type: Type.FOOD },
+      { name: "Oeuf", type: Type.FOOD },
+    ];
+
+    const resourceInAnotherOrder: Resource[] = [
+      { name: "Oeuf", type: Type.FOOD },
+      { name: "Fromage", type: Type.FOOD },
+    ];
+
+    const recipe: Recipe = new Recipe(
+      "Omelette au fromage",
+      resourceInAnotherOrder,
+    );
+
+    const product = recipe.combine(resources);
+
+    const expectedResult = {
+      name: "Omelette au fromage",
+      durability: Durability.LOW,
+      type: Type.MEAL,
+    };
+
+    assertEquals(product, expectedResult);
+  },
+);
